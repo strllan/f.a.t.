@@ -5,11 +5,9 @@
   <title>Contact | Sydney First Aid & CPR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Top bar -->
   <div class="top-bar">
     <div class="container top-bar-inner">
@@ -18,13 +16,11 @@
         <span>|</span>
         <span>✉ sydneyfirstaidandcpr@gmail.com</span>
       </div>
-      <div class="top-bar-right">
-        <span>⏰ Mon–Fri: 9am – 5pm</span>
-      </div>
+      <div class="top-bar-right">⏰ Mon–Fri: 9am – 5pm</div>
     </div>
   </div>
 
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header>
     <div class="container nav-container">
       <div class="logo">
@@ -36,96 +32,72 @@
       </div>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span><span></span><span></span>
-      </label>
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
 
       <nav>
-        <a href="../">Home</a>
-        <a href="../about/">About Us</a>
-        <a href="../courses/">Courses</a>
-        <a href="../locations/">Locations</a>
-        <a href="./" class="active">Contact</a>
-        <a href="./">
-          <button class="btn-primary">Book Now</button>
-        </a>
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/courses/">Courses</a>
+        <a href="/locations/">Locations</a>
+        <a href="/contact/" class="active">Contact</a>
+        <a href="/contact/"><button class="btn-primary">Book Now</button></a>
       </nav>
     </div>
   </header>
 
   <div class="page-hero">
     <div class="container">
-      <h1>Contact &amp; Bookings</h1>
-      <p>Send us an enquiry about course dates, group training or general questions.</p>
+      <h1>Contact & Bookings</h1>
+      <p>Send us a message to book a course or ask a question.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
+
       <div class="form-grid">
         <div>
           <form>
             <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required />
+              <label>Name *</label>
+              <input type="text" required />
             </div>
+
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
+              <label>Email *</label>
+              <input type="email" required />
             </div>
+
             <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" />
+              <label>Phone</label>
+              <input type="tel" />
             </div>
+
             <div class="form-group">
-              <label for="course">Course of interest</label>
-              <input
-                type="text"
-                id="course"
-                name="course"
-                placeholder="e.g. HLTAID011 First Aid, CPR, Childcare First Aid"
-              />
+              <label>Message *</label>
+              <textarea required></textarea>
             </div>
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell us your preferred date, location and how many people."
-                required
-              ></textarea>
-            </div>
-            <!-- Not wired up yet – we can later connect this with Formspree or similar -->
+
             <button type="submit" class="btn-primary">Send Enquiry</button>
           </form>
         </div>
 
+
         <div>
-          <h2>Contact details</h2>
+          <h2>Contact Details</h2>
           <p><strong>Phone:</strong> 02 8527 9797</p>
           <p><strong>Email:</strong> sydneyfirstaidandcpr@gmail.com</p>
-          <br />
-          <p><strong>Office hours:</strong> Mon–Fri, 9:00am – 5:00pm</p>
-          <p>
-            Training sessions may run outside office hours depending on course
-            schedules and workplace bookings.
-          </p>
-          <br />
-          <p>
-            For urgent group or workplace bookings, please include your organisation
-            name, approximate number of participants and preferred dates.
-          </p>
         </div>
       </div>
+
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Sydney First Aid &amp; CPR. All rights reserved.
+    © <span id="year"></span> Sydney First Aid & CPR.
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
