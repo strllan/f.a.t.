@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Locations | Sydney First Aid & CPR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span>☎ 02 8527 9797</span>
+        <span>|</span>
+        <span>✉ sydneyfirstaidandcpr@gmail.com</span>
+      </div>
+      <div class="top-bar-right">
+        <span>⏰ Mon–Fri: 9am – 5pm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <div class="logo-circle">FA</div>
+        <div>
+          <div class="logo-text-main">SYDNEY</div>
+          <div class="logo-text-sub">FIRST AID &amp; CPR</div>
+        </div>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="locations.html" class="active">Locations</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+          <button class="btn-primary">Book Now</button>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Training Locations</h1>
+      <p>
+        Convenient training venues across Sydney, with easy access to public transport and parking.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <div class="card">
+          <h3>Hurstville</h3>
+          <p><strong>Address:</strong> (Add your real address here)</p>
+          <p><strong>Nearby:</strong> Close to train station, local parking available.</p>
+          <p><strong>Courses:</strong> First Aid, CPR, Childcare First Aid.</p>
+        </div>
+        <div class="card">
+          <h3>Sydney CBD</h3>
+          <p><strong>Address:</strong> (Add venue or room details)</p>
+          <p><strong>Nearby:</strong> Short walk from major train stations.</p>
+          <p><strong>Courses:</strong> First Aid, CPR.</p>
+        </div>
+        <div class="card">
+          <h3>On-site Workplace Training</h3>
+          <p>
+            We travel to your workplace or community venue for group bookings
+            (minimum numbers apply).
+          </p>
+          <p><strong>Service area:</strong> Sydney metro and selected surrounding areas.</p>
+        </div>
+      </div>
+      <br />
+      <p>
+        Don’t see a location that suits you? Contact us to discuss upcoming courses
+        or mobile training options.
+      </p>
+      <br />
+      <a href="contact.html" class="btn-primary">Enquire about locations</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Sydney First Aid &amp; CPR. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
