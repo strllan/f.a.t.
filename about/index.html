@@ -5,11 +5,9 @@
   <title>About Us | Sydney First Aid & CPR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Top bar -->
   <div class="top-bar">
     <div class="container top-bar-inner">
@@ -18,13 +16,11 @@
         <span>|</span>
         <span>✉ sydneyfirstaidandcpr@gmail.com</span>
       </div>
-      <div class="top-bar-right">
-        <span>⏰ Mon–Fri: 9am – 5pm</span>
-      </div>
+      <div class="top-bar-right">⏰ Mon–Fri: 9am – 5pm</div>
     </div>
   </div>
 
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header>
     <div class="container nav-container">
       <div class="logo">
@@ -36,83 +32,38 @@
       </div>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span><span></span><span></span>
-      </label>
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
 
       <nav>
-        <a href="../">Home</a>
-        <a href="./" class="active">About Us</a>
-        <a href="../courses/">Courses</a>
-        <a href="../locations/">Locations</a>
-        <a href="../contact/">Contact</a>
-        <a href="../contact/">
-          <button class="btn-primary">Book Now</button>
-        </a>
+        <a href="/">Home</a>
+        <a href="/about/" class="active">About Us</a>
+        <a href="/courses/">Courses</a>
+        <a href="/locations/">Locations</a>
+        <a href="/contact/">Contact</a>
+        <a href="/contact/"><button class="btn-primary">Book Now</button></a>
       </nav>
     </div>
   </header>
 
   <div class="page-hero">
     <div class="container">
-      <h1>About Sydney First Aid &amp; CPR</h1>
-      <p>Friendly, practical training that gives you real-world skills, not just a certificate.</p>
+      <h1>About Sydney First Aid & CPR</h1>
+      <p>Your trusted provider of practical first aid and CPR training.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
       <h2>Our Story</h2>
-      <p>
-        Sydney First Aid &amp; CPR was created to make first aid training fast,
-        practical and enjoyable. With a healthcare background and years of teaching
-        experience, our trainers understand both the clinical guidelines and the
-        reality of emergencies at home, work and in the community.
-      </p>
-      <br />
-      <p>
-        We keep our classes small so you get plenty of hands-on practice with
-        manikins and equipment. Our aim is for every student to walk away feeling
-        confident, not nervous, about using their skills.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container">
-      <h2>Why choose us?</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Experienced trainers</h3>
-          <p>
-            Courses are delivered by trainers with real clinical and teaching
-            experience, so you get practical tips, not just theory.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Flexible delivery</h3>
-          <p>
-            Blended learning options with online theory and short face-to-face
-            sessions, perfect for busy workplaces and individuals.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Workplace &amp; group training</h3>
-          <p>
-            We can come to your workplace or community group for private sessions
-            across Sydney. Ask us about group discounts.
-          </p>
-        </div>
-      </div>
+      <p>We deliver hands-on first aid training that is easy to understand and enjoyable.</p>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Sydney First Aid &amp; CPR. All rights reserved.
+    © <span id="year"></span> Sydney First Aid & CPR.
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
