@@ -91,7 +91,11 @@
               <td>$120</td>
               <td class="actions-cell">
                 <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
+                <a href="#" class="btn-book open-booking-modal"
+                   data-course="HLTAID011 Provide First Aid"
+                   data-price="120">
+                  Book
+                </a>
               </td>
             </tr>
 
@@ -104,29 +108,69 @@
               <td>$65</td>
               <td class="actions-cell">
                 <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
+                <a href="#" class="btn-book open-booking-modal"
+                   data-course="HLTAID009 Provide CPR"
+                   data-price="65">
+                  Book
+                </a>
               </td>
             </tr>
 
             <tr>
               <td>Mon, 24 Nov 2025 – 6:00 pm</td>
-              <td>HLTAID012 Childcare First Aid</td>
+              <td>HLTAID012 First Aid in Education &amp; Care</td>
               <td>Strathfield Community Centre, Bates St</td>
               <td>Homebush</td>
               <td>NSW</td>
               <td>$150</td>
               <td class="actions-cell">
                 <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
+                <a href="#" class="btn-book open-booking-modal"
+                   data-course="HLTAID012 First Aid in Education &amp; Care"
+                   data-price="150">
+                  Book
+                </a>
               </td>
             </tr>
-
-            <!-- You can copy rows like this and add more dates later -->
           </tbody>
         </table>
       </div>
     </div>
   </section>
+
+  <!-- Booking popup modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close booking form">&times;</button>
+
+      <h2>Book a course</h2>
+      <p>Select your course below. Payment will be added soon with secure online checkout.</p>
+
+      <div class="form-group">
+        <label for="course-select"><strong>Course</strong></label>
+        <select id="course-select">
+          <option value="" data-price="0">Please select a course</option>
+          <option value="HLTAID009" data-price="65">HLTAID009 Provide CPR – $65</option>
+          <option value="HLTAID011" data-price="120">HLTAID011 Provide First Aid – $120</option>
+          <option value="HLTAID012" data-price="150">HLTAID012 First Aid in Education &amp; Care – $150</option>
+        </select>
+      </div>
+
+      <div class="modal-total">
+        <span>Total:</span>
+        <span id="course-total">$0</span>
+      </div>
+
+      <button class="btn-primary modal-pay-btn" type="button">
+        Pay (coming soon)
+      </button>
+
+      <p class="modal-note">
+        Online credit card payments will be added soon. For now, please use the
+        <a href="../contact/">contact form</a> to complete your booking.
+      </p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -139,6 +183,70 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Booking modal logic (ONLY on bookings page)
+    const modal = document.getElementById('booking-modal');
+    const openButtons = document.querySelectorAll('.open-booking-modal');
+    const closeButton = modal.querySelector('.modal-close');
+    const courseSelect = document.getElementById('course-select');
+    const totalSpan = document.getElementById('course-total');
+
+    // Open modal when clicking any "Book" button in the table
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const courseName = this.getAttribute('data-course');
+        const coursePrice = this.getAttribute('data-price');
+
+        // Pre-select the matching course in the dropdown
+        Array.from(courseSelect.options).forEach(option => {
+          if (option.value && courseName.includes(option.value)) {
+            option.selected = true;
+          }
+        });
+
+        // Update total
+        if (coursePrice) {
+          totalSpan.textContent = `$${coursePrice}`;
+        } else {
+          totalSpan.textContent = '$0';
+        }
+
+        modal.classList.add('open');
+      });
+    });
+
+    // Close modal (X button)
+    closeButton.addEventListener('click', function () {
+      modal.classList.remove('open');
+    });
+
+    // Close when clicking outside the modal
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+      }
+    });
+
+    // Update total when dropdown changes
+    courseSelect.addEventListener('change', function () {
+      const selected = courseSelect.options[courseSelect.selectedIndex];
+      const price = selected.getAttribute('data-price') || '0';
+      totalSpan.textContent = price === '0' ? '$0' : `$${price}`;
+    });
+
+    // Pay button placeholder
+    const payButton = document.querySelector('.modal-pay-btn');
+    payButton.addEventListener('click', function () {
+      if (!courseSelect.value) {
+        alert('Please select a course first.');
+        return;
+      }
+      alert('Payment system coming soon. We will add secure online payments here.');
+    });
+  </script>
 
 </body>
 </html>
