@@ -11,16 +11,14 @@
 </head>
 <body>
 
-  
   <!-- Top bar -->
-    <div class="top-bar">
-      <div class="container top-bar-inner center-top-bar">
-        <span>☎ 0406 618 128</span>
-        <span>|</span>
-        <span>✉ admin@communityfirstaid.com.au</span>
-      </div>
+  <div class="top-bar">
+    <div class="container top-bar-inner center-top-bar">
+      <span>☎ 0406 618 128</span>
+      <span>|</span>
+      <span>✉ admin@communityfirstaid.com.au</span>
     </div>
-
+  </div>
 
   <!-- Header / Nav -->
   <header>
@@ -44,13 +42,16 @@
         <a href="../courses/">Courses</a>
         <a href="../locations/">Locations</a>
         <a href="./" class="active">Contact</a>
-        <a href="./">
+
+        <!-- FIXED BUTTON -->
+        <a href="/bookings/">
           <button class="btn-primary">Book Now</button>
         </a>
       </nav>
     </div>
   </header>
 
+  <!-- Page hero -->
   <div class="page-hero">
     <div class="container">
       <h1>Contact &amp; Bookings</h1>
@@ -58,6 +59,7 @@
     </div>
   </div>
 
+  <!-- Contact form section -->
   <section class="section">
     <div class="container">
       <div class="form-grid">
@@ -67,14 +69,17 @@
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required />
             </div>
+
             <div class="form-group">
               <label for="email">Email *</label>
               <input type="email" id="email" name="email" required />
             </div>
+
             <div class="form-group">
               <label for="phone">Phone</label>
               <input type="tel" id="phone" name="phone" />
             </div>
+
             <div class="form-group">
               <label for="course">Course of interest</label>
               <input
@@ -84,6 +89,7 @@
                 placeholder="e.g. HLTAID011 First Aid, CPR, Childcare First Aid"
               />
             </div>
+
             <div class="form-group">
               <label for="message">Message *</label>
               <textarea
@@ -93,48 +99,33 @@
                 required
               ></textarea>
             </div>
-            <!-- Not wired up yet – we can later connect this with Formspree or similar -->
+
             <button type="submit" class="btn-primary">Send Enquiry</button>
           </form>
         </div>
 
+        <!-- Contact details (UPDATED) -->
         <div>
           <h2>Contact details</h2>
-          <p><strong>Phone:</strong> 02 8527 9797</p>
-          <p><strong>Email:</strong> sydneyfirstaidandcpr@gmail.com</p>
+          <p><strong>Phone:</strong> 0406 618 128</p>
+          <p><strong>Email:</strong> admin@communityfirstaidtraining.com.au</p>
+
           <br />
+
           <p><strong>Office hours:</strong> Mon–Fri, 9:00am – 5:00pm</p>
-          <p>
-            Training sessions may run outside office hours depending on course
-            schedules and workplace bookings.
-          </p>
+          <p>Training sessions may run outside office hours depending on course schedules and workplace bookings.</p>
+
           <br />
-          <p>
-            For urgent group or workplace bookings, please include your organisation
-            name, approximate number of participants and preferred dates.
-          </p>
+
+          <p>For urgent group or workplace bookings, please include your organisation name, approximate number of participants and preferred dates.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-title">Community First Aid Training</div>
-      <span>☎ 0406 618 128</span>
-      <span class="divider">|</span>
-      <span>✉ admin@communityfirstaidtraining.com.au</span>
-    </div>
-  </div>
-</footer>
-
-
-
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  <!-- Footer (FIXED STRUCTURE) -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-title">Community First Aid Training</div>
+      <div class="footer-contact">
+        <span>☎ 0406 618 128</span>
