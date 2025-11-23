@@ -380,3 +380,13 @@ footer {
   color: #777;
   margin-top: 32px;
 }
+
+
+.center-top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
