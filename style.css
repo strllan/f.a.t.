@@ -422,3 +422,80 @@ textarea {
   margin: 0 10px;
   color: #888;
 }
+
+/* ====== BOOKINGS TABLE ====== */
+.schedule-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table thead th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.schedule-table .month-row td {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.actions-header {
+  width: 130px;
+  text-align: right;
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Info / Book buttons in table */
+.btn-info,
+.btn-book {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-left: 6px;
+  text-align: center;
+}
+
+/* Grey Info button */
+.btn-info {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* Green Book button */
+.btn-book {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+.btn-info:hover {
+  background-color: #d1d5db;
+}
+
+.btn-book:hover {
+  background-color: #16a34a;
+}
+
