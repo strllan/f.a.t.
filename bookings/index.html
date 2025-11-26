@@ -53,78 +53,28 @@
   <div class="page-hero">
     <div class="container">
       <h1>Book a Course</h1>
-      <p>Select a date, course and location, then click Book to secure your spot.</p>
+      <p>Select a date, course and location using the live calendar below.</p>
     </div>
   </div>
 
-  <!-- Booking table -->
+  <!-- Booking calendar -->
   <section class="section">
     <div class="container">
-      <h2>Upcoming courses</h2>
-      <p>Below are some example sessions. You can update dates, times and prices as needed.</p>
+      <h2>Live Booking Calendar</h2>
+      <p>Choose the time that suits you. Availability is updated automatically.</p>
 
-      <div class="schedule-wrapper">
-        <table class="schedule-table">
-          <thead>
-            <tr>
-              <th>Date &amp; time</th>
-              <th>Course</th>
-              <th>Venue</th>
-              <th>Suburb</th>
-              <th>State</th>
-              <th>Cost</th>
-              <th class="actions-header"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Month heading row -->
-            <tr class="month-row">
-              <td colspan="7">November 2025</td>
-            </tr>
-
-            <tr>
-              <td>Sat, 23 Nov 2025 – 1:30 pm</td>
-              <td>HLTAID011 Provide First Aid</td>
-              <td>St George Community Centre, Short St</td>
-              <td>Kogarah</td>
-              <td>NSW</td>
-              <td>$120</td>
-              <td class="actions-cell">
-                <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Sat, 23 Nov 2025 – 4:30 pm</td>
-              <td>HLTAID009 Provide CPR</td>
-              <td>St George Community Centre, Short St</td>
-              <td>Kogarah</td>
-              <td>NSW</td>
-              <td>$65</td>
-              <td class="actions-cell">
-                <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Mon, 24 Nov 2025 – 6:00 pm</td>
-              <td>HLTAID012 Childcare First Aid</td>
-              <td>Strathfield Community Centre, Bates St</td>
-              <td>Homebush</td>
-              <td>NSW</td>
-              <td>$150</td>
-              <td class="actions-cell">
-                <a href="../courses/" class="btn-info">Info</a>
-                <a href="../contact/" class="btn-book">Book</a>
-              </td>
-            </tr>
-
-            <!-- You can copy rows like this and add more dates later -->
-          </tbody>
-        </table>
+      <!-- Calendly inline widget begin -->
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/xuyuelian"
+        style="min-width:320px;height:700px;">
       </div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async>
+      </script>
+      <!-- Calendly inline widget end -->
     </div>
   </section>
 
