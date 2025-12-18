@@ -104,6 +104,17 @@ header {
   letter-spacing: 0.08em;
 }
 
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-heart {
+  width: 36px;
+  height: auto;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -481,3 +492,10 @@ textarea {
 .btn-book:hover {
   background-color: #16a34a;
 }
+
+@media (max-width: 768px) {
+  .logo-heart {
+    width: 30px;
+  }
+}
+
